@@ -9,7 +9,8 @@
 			<br/>
 			<h4> #CRUD</h4>
 			<ul>
-				<li><a href="Incluir.jsp">Incluir BD</a></li>
+				<li><a href="incluir.html">Incluir</a></li>
+				<li><a href="editar.html">Editar</a></li>
 				<li><a href="#">Link 3</a></li>
 			</ul>
 		</nav>

@@ -16,7 +16,7 @@
 		<main>
 		<div id="content">
 			<div class="innertube">
-				<h1>.:: Incluir [PrjSrvMVC001]::.</h1>
+				<h1>.:: Incluir(JSP) [PrjSrvMVC001]::.</h1>
 				<br />
 				<div align="center">
 					<form method="post" action="/PrjSrvMVC001/EstudanteController">
@@ -39,7 +39,7 @@
 							</tr>
 							<tr>
 								<td></td>
-								<td><input type="hidden" value="Incluir" name="acao"
+								<td><input type="hidden" value="incluir" name="acao"
 									id="acao"></td>
 								<td><input type="submit" value="Incluir" name="btnIncluir"
 									id="btnIncluir"></td>

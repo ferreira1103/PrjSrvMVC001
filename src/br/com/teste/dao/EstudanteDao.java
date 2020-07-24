@@ -55,6 +55,7 @@ public class EstudanteDao {
 
 	}
 
+	//Listar estudantes
 	public List<Estudante> listarEstudantes() {
 
 		List<Estudante> listaDeEstudantes = new ArrayList<Estudante>();
@@ -88,6 +89,58 @@ public class EstudanteDao {
 			esql.printStackTrace();
 		}
 		return listaDeEstudantes;
+	}
+
+	//Excluir estudantes
+	public void excluirEstudantes(Estudante estudante) {
+
+		try {
+
+			
+			String sql = "Delete from Student where id=?";
+
+			PreparedStatement stmt = connection.prepareStatement(sql);
+
+			stmt.setInt(1, estudante.getCodigo());
+
+			stmt.executeUpdate();
+
+			stmt.close();
+//			connection.close();
+
+			System.out.println(":: Deu certo excluir [DAO]::" + sql);
+
+		} catch (SQLException esql) {
+			System.out.println(":: Deu erro:" + esql);
+		}
+
+	}
+	//Editar estudantes
+	public void editarEstudantes(Estudante estudante) {
+
+		try {
+
+			
+			String sql = "Update Student set name=?, city=?, phone=? where id=?";
+
+			PreparedStatement stmt = connection.prepareStatement(sql);
+
+			stmt.setString(1, estudante.getNome());
+			stmt.setString(2, estudante.getCidade());
+			stmt.setString(3, estudante.getTelefone());
+			stmt.setInt(4, estudante.getCodigo());
+
+			stmt.executeUpdate();
+
+			stmt.close();
+//			connection.close();
+
+			System.out.println(":: Deu certo editar [DAO]::" + sql);
+
+		} catch (SQLException esql) {
+			System.out.println(":: Deu erro:" + esql);
+		}
+
 	}
 
 }

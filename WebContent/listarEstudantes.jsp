@@ -45,9 +45,9 @@
 								<td><c:out value="${estudante.cidade}" /></td>
 								<td><c:out value="${estudante.telefone}" /></td>
 								<td><a
-									href='EstudanteController?acao=editar&id=<c:out  value="${estudante.codigo}"/>'>Editar</a></td>
+									href='editar.html'>Editar</a></td>
 								<td><a
-									href='EstudanteController?acao=deletar&id=<c:out value="${estudante.codigo}"/>'>Deletar</a></td>
+									href='EstudanteController?acao=excluir&id=<c:out value="${estudante.codigo}"/>'>Deletar</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
